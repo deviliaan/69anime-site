@@ -37,6 +37,8 @@
 	"type": "module",
 	"dependencies": {
 		"@consumet/extensions": "^1.5.4",
-		"@prisma/client": "^5.8.1"
+		"@icons-pack/svelte-simple-icons": "^3.0.0",
+		"@prisma/client": "^5.8.1",
+		"@tabler/icons-svelte": "^2.46.0"
 	}
 }
