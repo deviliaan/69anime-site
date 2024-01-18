@@ -6,6 +6,6 @@ import {IconHeart} from '@tabler/icons-svelte';
         <p class="text-sm">© 2024 - All right reserved</p>
     </aside>
     <nav class="grid-flow-col gap-4 md:place-self-center p-2 md:justify-self-end">
-        <IconHeart />
+        <IconHeart size={48}/>
     </nav>
 </footer>
