@@ -1,6 +1,18 @@
-<script>
+<script lang="ts">
+import {prisma} from '$lib/prisma';
 export let data;
 const {anime} = data;
+async function saveToDatabase() {
+  await prisma.anime.create({
+    data: {
+      title: anime?.title,
+      image: anime?.image,
+      malID: anime?.malID,
+      plot: anime?.description,
+      type: anime?.type
+    }    
+  })
+}
 </script>
 <div>
     <div class="grid grid-cols-2 w-full">
@@ -16,9 +28,10 @@ const {anime} = data;
                     <p class="text-sm">Type: {anime?.type}</p>
                 </div>
             </div>
+            <!-- Button -->
             <div class="stats shadow w-full mt-2">
                 <div class="stat p-2">
-                    <button class="btn text-accent">Add</button>
+                    <button on:click={saveToDatabase} class="btn text-accent">Add</button>
                 </div>
             </div>
         </div>
